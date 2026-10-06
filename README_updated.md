@@ -1,123 +1,240 @@
-# CodeAlpha Python Programming Internship — All 4 Tasks
+# 🐍 CodeAlpha Python Programming Internship
 
-This repository contains my Python projects completed during the **CodeAlpha Python Programming Internship**.
+This repository brings together my work for the **CodeAlpha Python Programming Internship**. It contains three console-based Python projects, one for each task:
 
-The projects demonstrate Python programming fundamentals, problem-solving, file handling, automation, data processing, and basic chatbot development.
+| Task | Project | File |
+|------|---------|------|
+| Task 1 | [🎮 Hangman Game](#-task-1--hangman-game) | `hangman.py` |
+| Task 2 | [📈 Stock Portfolio Tracker](#-task-2--stock-portfolio-tracker) | `stock_portfolio_tracker.py` |
+| Task 3 | [🤖 Simple Chatbot](#-task-3--simple-chatbot) | `chatbot.py` |
 
-## 📂 Projects
+---
 
-| Task | Project | Description | Main File |
-|---|---|---|---|
-| **Task 1** | 🎮 Hangman Game | A text-based Hangman game where the user guesses a hidden word. | `hangman.py` |
-| **Task 2** | 📈 Stock Portfolio Tracker | Tracks stock selections, calculates investment value, and can save the portfolio summary in TXT and CSV formats. | `stock_portfolio_tracker.py` |
-| **Task 3** | ⚙️ Task Automation | Python automation utilities including moving JPG files, extracting email addresses from text files, and scraping a webpage title. | `task3_*.py` |
-| **Task 4** | 🤖 Basic Chatbot | A simple console-based chatbot that responds to user inputs. | `chatbot.py` |
+## 🎮 Task 1 — Hangman Game
 
-## 🛠️ Technologies Used
+A simple text-based Hangman game built in Python.
 
-- Python
-- Visual Studio Code
-- Git
-- GitHub
-- Python Standard Library
-- `requests` for Task 3, Option C
+### 📌 Features
 
-## ▶️ How to Run
+- 5 predefined words, chosen randomly each round
+- Maximum of 6 incorrect guesses allowed
+- Console-based input/output with a visual hangman stage tracker
+- Option to replay after each game
 
-Clone this repository and open the project folder in VS Code or a terminal.
+### 🧠 Concepts Used
 
-### Task 1 — Hangman Game
+`random`, `while` loops, `if-else`, strings, lists
+
+### ▶️ How to Run
 
 ```bash
 python hangman.py
 ```
 
-### Task 2 — Stock Portfolio Tracker
+### 📸 Demo
 
-```bash
-python stock_portfolio_tracker.py
+[Watch the demo](https://lnkd.in/p/gpyxevqE)
+
+---
+
+## 📈 Task 2 — Stock Portfolio Tracker
+
+A simple Python command-line application that lets users track their stock investments and calculate the total value of their portfolio.
+
+### 🚀 Features
+
+- Uses a dictionary of stock symbols with predefined prices
+- Lets the user enter a stock symbol and the number of shares they own
+- Calculates the investment value for each stock
+- Displays a portfolio summary with the total investment value
+- Saves the results as TXT and CSV files with a timestamp
+
+### 💹 Available Stocks
+
+| Symbol | Price (USD) |
+|--------|-------------|
+| AAPL   | $180 |
+| TSLA   | $250 |
+| GOOGL  | $140 |
+| AMZN   | $145 |
+| MSFT   | $415 |
+| META   | $480 |
+| NFLX   | $650 |
+
+### 🛠️ Technologies and Concepts Used
+
+- Python 3
+- Dictionaries
+- User input handling
+- Calculations
+- File handling (TXT)
+- CSV processing (`csv` module)
+- Date and time functionality (`datetime` module)
+
+### ▶️ How to Run
+
+1. Make sure Python 3 is installed on your system.
+2. Clone this repository:
+
+   ```bash
+   git clone https://github.com/PriyankamaryJ/CodeAlpha_Stock-Portfolio-Tracker.git
+   ```
+
+3. Go to the project folder:
+
+   ```bash
+   cd CodeAlpha_Stock-Portfolio-Tracker
+   ```
+
+4. Run the program:
+
+   ```bash
+   python stock_portfolio_tracker.py
+   ```
+
+### 📖 How It Works
+
+1. The program displays the available stocks and their prices.
+2. Enter a stock symbol, then the quantity of shares you own.
+3. Repeat for as many stocks as you like.
+4. Type `done` as the stock symbol to finish.
+5. The program shows your portfolio summary and total investment value.
+6. Choose `y` when asked to save the results to a file.
+
+### 🧪 Sample Run
+
+```
+Stock symbol: AAPL
+Quantity of AAPL: 40
+Added 40 share(s) of AAPL.
+
+Stock symbol: META
+Quantity of META: 80
+Added 80 share(s) of META.
+
+Stock symbol: NFLX
+Quantity of NFLX: 100
+Added 100 share(s) of NFLX.
+
+Stock symbol: done
+
+--- Portfolio Summary ---
+AAPL: 40 shares x $180 = $7200
+META: 80 shares x $480 = $38400
+NFLX: 100 shares x $650 = $65000
+-----------------------------
+Total Investment: $110600
+
+Save results to file? (y/n): y
 ```
 
-### Task 3 — Task Automation
+### 💾 Output Files
 
-Option A — Move JPG files:
+When you choose to save, two files are created with a timestamp in the name:
 
-```bash
-python task3_move_jpg_files.py
+- `portfolio_summary_YYYY-MM-DD_HH-MM-SS.txt`
+- `portfolio_summary_YYYY-MM-DD_HH-MM-SS.csv`
+
+### 🎥 Demo
+
+[Watch the demo video](https://lnkd.in/p/gskSaijr)
+
+---
+
+## 🤖 Task 3 — Simple Chatbot
+
+A simple rule-based chatbot built with Python that runs in the command line and responds to basic user messages.
+
+### 🚀 Features
+
+- Shows a welcome banner when the program starts
+- Responds to basic messages such as greetings, questions about the bot, and thank-you messages
+- Uses simple conditional logic to match the user's input with the right response
+- Keeps the conversation going in a loop until the user ends it
+- Ends the conversation when the user types `bye`, `exit`, or `quit`
+
+### 💬 Sample Conversation
+
+```
+=== Simple Chatbot ===
+Type 'bye', 'exit', or 'quit' to end the conversation.
+
+You: hi
+Bot: Hi!
+You: what is your name
+Bot: I'm a simple chatbot built with Python!
+You: what can you do
+Bot: I can chat about basic things! Try saying hello, asking how I am, or saying bye.
+You: thank you
+Bot: No problem!
+You: bye
+Bot: Goodbye!
 ```
 
-Option B — Extract emails:
+### 🛠️ Technologies and Concepts Used
 
-```bash
-python task3_extract_emails.py
+- Python 3
+- User input handling
+- Loops
+- Conditional statements (`if` / `elif` / `else`)
+- String processing
+
+### ▶️ How to Run
+
+1. Make sure Python 3 is installed on your system.
+2. Clone this repository:
+
+   ```bash
+   git clone https://github.com/PriyankamaryJ/CodeAlpha_Chatbot.git
+   ```
+
+3. Go to the project folder:
+
+   ```bash
+   cd CodeAlpha_Chatbot
+   ```
+
+4. Run the chatbot:
+
+   ```bash
+   python chatbot.py
+   ```
+
+5. Start chatting. Type `bye`, `exit`, or `quit` to end the conversation.
+
+### 📖 How It Works
+
+1. The program prints a welcome banner and instructions.
+2. It waits for the user to type a message.
+3. The message is checked against known keywords and phrases.
+4. The bot prints the matching response.
+5. This repeats in a loop until the user types `bye`, `exit`, or `quit`.
+
+### 🎥 Demo
+
+[Watch the demo video](https://lnkd.in/p/gyszjjaj)
+
+---
+
+## 📁 Project Structure
+
 ```
-
-Option C — Scrape webpage title:
-
-```bash
-pip install requests
-python task3_scrape_title.py
-```
-
-### Task 4 — Basic Chatbot
-
-```bash
-python chatbot.py
-```
-
-## 📁 Repository Structure
-
-```text
-CodeAlpha_Assessment/
+CodeAlpha_Python_Internship/
 │
-├── hangman.py
-├── stock_portfolio_tracker.py
-├── task3_move_jpg_files.py
-├── task3_extract_emails.py
-├── task3_scrape_title.py
-├── chatbot.py
+├── hangman.py                  # Task 1 – Hangman Game
+├── stock_portfolio_tracker.py  # Task 2 – Stock Portfolio Tracker
+├── chatbot.py                  # Task 3 – Simple Chatbot
 └── README.md
 ```
 
-## ✨ Key Features
-
-### Task 1 — Hangman
-- Random word selection
-- User-friendly console interaction
-- Guess tracking
-- Win/loss result
-
-### Task 2 — Stock Portfolio Tracker
-- Stock symbol and quantity input
-- Portfolio value calculation
-- Portfolio summary
-- TXT and CSV export
-- Timestamped output
-
-### Task 3 — Task Automation
-- File organization
-- Email extraction
-- Webpage title extraction
-- Practical Python automation
-
-### Task 4 — Basic Chatbot
-- Interactive console conversation
-- Basic response handling
-- Simple Python logic
-
-## 📌 Internship
-
-**Program:** CodeAlpha Python Programming Internship  
-**Repository:** CodeAlpha Assessment — All 4 Tasks
-
-This repository is maintained as a consolidated collection of my internship tasks and project demonstrations.
+---
 
 ## 👩‍💻 Author
 
 **Priyanka Mary J**
+B.Tech Artificial Intelligence and Data Science
+CodeAlpha Python Programming Intern
 
-Aspiring Software Engineer | AI & Data Science Student
+## 🙏 Acknowledgement
 
----
-
-⭐ If you find this repository useful, feel free to explore the individual projects.
+Thanks to CodeAlpha for the internship opportunity and for the hands-on learning experience.
